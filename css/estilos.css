@@ -8,11 +8,9 @@ body{
 	font-family: 'Oxygen', sans-serif;
 }
 .wrapper{
-	width: 90vw;
+	width: 98vw;
 	height: 100vh;
-	max-width: 1200px;
 	margin: auto;
-
 }
 .header{
 	width: 100%;
@@ -49,7 +47,7 @@ body{
 	transition: all ease 1s;
 }
 .main-menu__list-link:hover{
-	background: rgb(255, 167, 90);
+	background: rgb(1, 219, 255);
 }
 .section-main{
 	width: 100%;
@@ -146,5 +144,7 @@ body{
 	.section-main__container-text{
 		width: 100%;	
 	}
-
+	.main-menu__list-link{
+		font-size: 18px;
+	}
 }
