@@ -8,54 +8,38 @@ body{
 	font-family: 'Oxygen', sans-serif;
 }
 .wrapper{
-	width: 90vw;
-	height: 100vh;
-	max-width: 1200px;
+	width: 100vw;
 	margin: auto;
-
 }
 .header{
 	width: 100%;
-	height:8%;
-	overflow: hidden;
-}
-.main-menu{
-	height: 100%;
-
+	height:60px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 }
-.main-menu__logo-containder{
-	height: 100%;
-	display: flex;
-	align-items: center;
+.main-menu__link{
+	padding: 20px;
+	text-decoration: none;
+	color: #000;
+	font-size: 22px;
+}
+.main-menu__link:hover{
+	background: skyblue;
 }
 .main-menu__logo{
+	margin-left: 10px;
 	width: 80px;
 	object-fit: cover;
 }
-.main-menu__list{
-	list-style: none;
-	display: flex;
-	align-items: stretch;
-}
-.main-menu__list-link{
-	color: #000;
-	display: inline-block;
-	text-decoration: none;
-	font-size: 22px;
-	padding: 35px;
-	transition: all ease 1s;
-}
-.main-menu__list-link:hover{
-	background: rgb(255, 167, 90);
-}
+
 .section-main{
 	width: 100%;
-	height: 35%;
+	margin-top: 48px;
 	display: flex;
 	overflow: hidden;
+	align-items: center;
 }
 .section-main__container-image,
 .section-main__container-text{
@@ -105,6 +89,7 @@ body{
 	font-weight: bold;
 	color: white;
 	font-size: 17px;
+	cursor: pointer;
 }
 .services{
 	width: 100%;
@@ -138,6 +123,25 @@ body{
 	height: 60%;
 }
 @media screen and (max-width:800px){
+	.main-menu{
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		background: skyblue;
+		bottom: -48px;
+		width: 100%;
+		display: flex;
+	}
+	.main-menu__link{
+		padding:10px;
+		color: #fff;
+		width: 50%;
+		text-align: center;
+	}
+	.main-menu__link:hover{
+		background: none;
+		color: #000;
+	}
 	.section-main{
 		flex-direction: column;
 		height: auto;
