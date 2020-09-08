@@ -1,0 +1,150 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	font-size: 16px;
+	font-family: 'Oxygen', sans-serif;
+}
+.wrapper{
+	width: 90vw;
+	height: 100vh;
+	max-width: 1200px;
+	margin: auto;
+
+}
+.header{
+	width: 100%;
+	height:8%;
+	overflow: hidden;
+}
+.main-menu{
+	height: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.main-menu__logo-containder{
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.main-menu__logo{
+	width: 80px;
+	object-fit: cover;
+}
+.main-menu__list{
+	list-style: none;
+	display: flex;
+	align-items: stretch;
+}
+.main-menu__list-link{
+	color: #000;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 22px;
+	padding: 35px;
+	transition: all ease 1s;
+}
+.main-menu__list-link:hover{
+	background: rgb(255, 167, 90);
+}
+.section-main{
+	width: 100%;
+	height: 35%;
+	display: flex;
+	overflow: hidden;
+}
+.section-main__container-image,
+.section-main__container-text{
+	width: 50%;
+	height: 100%;
+}
+.section-main__img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+.section-main__container-text{
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.section-main__title{
+	font-size: 44px;
+}
+.section-main__description{
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	color: gray;
+}
+.section-main__contact{
+	margin-top: 10px;
+}
+.section-main__input{
+	width: 60%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background: #e3e3e3;
+	color: #262626;
+	font-size: 18px;
+	margin-right: 5px;
+}
+.section-main__btn{
+	height: 100%;
+	width: 35%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background: #2990ff;
+	font-weight: bold;
+	color: white;
+	font-size: 17px;
+}
+.services{
+	width: 100%;
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+	grid-auto-rows: 1fr;
+}
+.services-card{
+	text-align: center;
+}
+.services-card__img{
+	width: 20%;
+}
+.services-card__title{
+	font-weight: 900;
+	font-size: 20px;
+}
+.services-card__text{
+	line-height: 30px;
+	font-size: 18px;
+	color: gray;
+	width: 90%;
+	margin: 10px auto;
+}
+.section-main-2{
+	margin: 50px 0px;
+	flex-direction: row-reverse;
+}
+.section-main--final{
+	height: 60%;
+}
+@media screen and (max-width:800px){
+	.section-main{
+		flex-direction: column;
+		height: auto;
+	}
+	.section-main__container-image,
+	.section-main__container-text{
+		width: 100%;	
+	}
+
+}
