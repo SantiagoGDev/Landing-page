@@ -5,7 +5,7 @@ let open = document.querySelector('#open'),
 
 open.addEventListener('click',()=>{
 	let question = prompt('¿¡Podras Pasar!?');
-	question.toLowerCase();
+	question = question.toLowerCase();
 
 	if(question == 'juancho'){
 		content.style.visibility = 'visible';
