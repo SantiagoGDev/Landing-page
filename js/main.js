@@ -16,7 +16,7 @@ open.addEventListener('click',()=>{
 });
 
 close.addEventListener('click',()=>{
-	modal.classList.toggle('modal-open')
+	modal.classList.remove('modal-open')
 
 	setTimeout(()=>{
 		content.style.visibility = 'hidden';
@@ -25,7 +25,7 @@ close.addEventListener('click',()=>{
 
 window.addEventListener('click', e =>{
 	if (e.target == content) {
-		modal.classList.toggle('modal-open')
+		modal.classList.remove('modal-open')
 
 		setTimeout(()=>{
 			content.style.visibility = 'hidden';
