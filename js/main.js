@@ -3,17 +3,53 @@ let open = document.querySelector('#open'),
 	content = document.querySelector('#content'),
 	modal = document.querySelector('#modal');
 
-open.addEventListener('click',()=>{
-	let question = prompt('¿¡Podras Pasar!?');
-	question = question.toLowerCase();
 
-	if(question == 'juancho'){
-		content.style.visibility = 'visible';
-		modal.classList.toggle('modal-open')
-	}else{
-		alert('Error No eres Bienvenido');
-	}
+open.addEventListener('click', async ()=>{
+	
+
+const {value: code} = await Swal.fire({
+	title: '¿Eres el Elegido ?',
+	text:  'Tienes que poner el codigo correcto',
+	icon: 'question',
+	confirmButtonText: 'Enviar',
+	backdrop: true,
+	allowOutsideClick: false,
+	allowEscapeKey: false,
+	allowEnterKey: false,
+	stopKeydownPropagation:false,
+
+	input: 'text',
+	inputPlaceholder: 'Codigo',
+
+	showCloseButton: true,
+	closeButtonAriaLabel: 'Cerar'
+
+	// imageUrl:
+	// imageWidth:
+	// imageHeight:
+	// imageAlt:
 });
+ 
+	
+let codigo = code;
+codigo = codigo.toLowerCase();
+
+ if(codigo == 'juancho'){
+ 	content.style.visibility = 'visible';
+	modal.classList.toggle('modal-open')
+ }else {
+ 	Swal.fire({
+ 		icon: 'error',
+ 		title: 'Eres un Intruso',
+ 		text: 'No puedes entrar',
+ 		showConfirmButton: true,
+		confirmButtonColor: '#db0e0e',
+		confirmButtonAriaLabel: 'Confirmar',
+ 	});
+ }
+});
+
+
 
 close.addEventListener('click',()=>{
 	modal.classList.remove('modal-open')
